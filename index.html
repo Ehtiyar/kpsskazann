@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="tr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Betül & Enes - Günlük Ders Takip</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="topbar">
+		<div class="brand">
+			<div class="heart">❤</div>
+			<h1>Betül & Enes - Günlük Ders Takip</h1>
+		</div>
+		<div class="controls">
+			<label>Ay
+				<select id="monthSelect"></select>
+			</label>
+			<label>Yıl
+				<select id="yearSelect"></select>
+			</label>
+			<label>Betül Hedefi
+				<input id="leftTarget" type="number" min="1" step="1" value="30">
+			</label>
+			<label>Enes Hedefi
+				<input id="rightTarget" type="number" min="1" step="1" value="30">
+			</label>
+			<button id="todayBtn" class="btn">Bugün</button>
+			<button id="exportBtn" class="btn">Dışa Aktar</button>
+			<label class="btn file-btn">İçe Aktar
+				<input id="importInput" type="file" accept="application/json">
+			</label>
+			<button id="resetBtn" class="btn danger">Sıfırla</button>
+		</div>
+	</header>
+
+	<main class="board">
+		<section class="side female">
+			<header class="side-header">
+				<h2>Betül</h2>
+				<div class="legend">
+					<span class="dot ok"></span>
+					<span id="leftLegend">30+ Paragraf = otomatik ✓</span>
+				</div>
+			</header>
+			<div class="table-wrap">
+				<table class="track">
+					<thead>
+						<tr>
+							<th>Gün</th>
+							<th>Paragraf</th>
+							<th>Matematik</th>
+							<th>Tarih</th>
+							<th>Vatandaşlık</th>
+							<th>Coğrafya</th>
+							<th>Tamam</th>
+						</tr>
+					</thead>
+					<tbody id="leftBody"></tbody>
+				</table>
+			</div>
+		</section>
+
+		<section class="side male">
+			<header class="side-header">
+				<h2>Enes</h2>
+				<div class="legend">
+					<span class="dot ok"></span>
+					<span id="rightLegend">30+ Paragraf = otomatik ✓</span>
+				</div>
+			</header>
+			<div class="table-wrap">
+				<table class="track">
+					<thead>
+						<tr>
+							<th>Gün</th>
+							<th>Paragraf</th>
+							<th>Matematik</th>
+							<th>Tarih</th>
+							<th>Vatandaşlık</th>
+							<th>Coğrafya</th>
+							<th>Tamam</th>
+						</tr>
+					</thead>
+					<tbody id="rightBody"></tbody>
+				</table>
+			</div>
+		</section>
+	</main>
+
+	<footer class="stats">
+		<div class="stat" id="leftStats"></div>
+		<div class="stat" id="rightStats"></div>
+	</footer>
+
+	<script src="script.js"></script>
+</body>
+</html>
